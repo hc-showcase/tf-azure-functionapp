@@ -51,7 +51,8 @@ resource "azurerm_app_service_plan" "plan" {
   name                = random_string.app_service_plan_name.result
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  kind                = "FunctionApp"
+  kind                = "Linux"
+  reserved            = true
 
   sku {
     tier = "Dynamic"
@@ -66,7 +67,7 @@ resource "azurerm_storage_container" "storage_container" {
 }
 
 resource "azurerm_storage_blob" "storage_blob" {
-  name                   = "azure.zip"
+  name                   = "dist.zip"
   storage_account_name   = azurerm_storage_account.storage.name
   storage_container_name = azurerm_storage_container.storage_container.name
   type                   = "Block"
@@ -112,10 +113,12 @@ resource "azurerm_function_app" "function" {
   app_service_plan_id       = azurerm_app_service_plan.plan.id
   storage_account_name       = azurerm_storage_account.storage.name
   storage_account_access_key = azurerm_storage_account.storage.primary_access_key
+  version = "~3"
 
   app_settings = {
     FUNCTIONS_WORKER_RUNTIME = "python"
     FUNCTION_APP_EDIT_MODE   = "readonly"
+    FUNCTIONS_EXTENSION_VERSION = "~3"
     https_only               = true
 
     HASH                     = base64encode(filesha256("./dist.zip"))
