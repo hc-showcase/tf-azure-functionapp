@@ -14,7 +14,8 @@ Execute ```az login``` and follow the instructions in your browser or ```az logi
 
 ## Clone this repo
 
-```git clone git@github.com:hc-showcase/tf-azure-functionapp.git
+```
+git clone git@github.com:hc-showcase/tf-azure-functionapp.git
 
 cd tf-azure-functionapp
 
