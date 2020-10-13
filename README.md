@@ -32,24 +32,6 @@ mkaesz@arch ~/workspace> cd tf-azure-functionapp/
 
 The Zip file must contain the functions and the host.json file in the root. It must not container a root folder.
 
-The Zip must look like that:
-```
-mkaesz@arch ~/w/tf-azure-functionapp (main)> unzip -l dist.zip
-Archive:  dist.zip
-  Length      Date    Time    Name
----------  ---------- -----   ----
-        0  2020-10-13 11:42   HttpExample/
-      751  2020-10-13 11:41   HttpExample/__init__.py
-        0  2020-10-13 11:42   HttpExample/__pycache__/
-      865  2020-10-13 11:42   HttpExample/__pycache__/__init__.cpython-38.pyc
-      314  2020-10-13 11:41   HttpExample/function.json
-      288  2020-10-13 11:41   host.json
-      117  2020-10-13 11:41   local.settings.json
-      109  2020-10-13 11:41   requirements.txt
----------                     -------
-     2444                     8 files
-
-```
 
 To build the Zip I used 7z:
 ```
@@ -75,6 +57,26 @@ Items to compress: 8
 Files read from disk: 6
 Archive size: 2717 bytes (3 KiB)
 Everything is Ok
+```
+
+
+The Zip must look like that:
+```
+mkaesz@arch ~/w/tf-azure-functionapp (main)> unzip -l dist.zip
+Archive:  dist.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+        0  2020-10-13 11:42   HttpExample/
+      751  2020-10-13 11:41   HttpExample/__init__.py
+        0  2020-10-13 11:42   HttpExample/__pycache__/
+      865  2020-10-13 11:42   HttpExample/__pycache__/__init__.cpython-38.pyc
+      314  2020-10-13 11:41   HttpExample/function.json
+      288  2020-10-13 11:41   host.json
+      117  2020-10-13 11:41   local.settings.json
+      109  2020-10-13 11:41   requirements.txt
+---------                     -------
+     2444                     8 files
+
 ```
 
 The repository already contains a dist.zip that can be immediately be used without the build step.
