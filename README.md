@@ -34,7 +34,7 @@ The Zip file must contain the functions and the host.json file in the root. It m
 
 The Zip must look like that:
 ```
-mkaesz@arch ~/w/tf-azure-funcapp (main)> unzip -l dist.zip
+mkaesz@arch ~/w/tf-azure-functionapp (main)> unzip -l dist.zip
 Archive:  dist.zip
   Length      Date    Time    Name
 ---------  ---------- -----   ----
