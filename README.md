@@ -53,11 +53,10 @@ Archive:  dist.zip
 
 To build the Zip I used 7z:
 ```
-mkaesz@arch ~/w/tf-azure-functionapp (main)> 
-7z a dist.zip ./functions/*
+mkaesz@arch ~/w/tf-azure-functionapp (main)> 7z a dist.zip ./functions/*
 
 7-Zip [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
-p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,64 bits,24 CPUs AMD Ryzen 9 3900X 12-Core Processor             (870F10),ASM,AES-NI)
+p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,64 bits,24 CPUs AMD Ryzen 9 3900X 12-Core Processor(870F10),ASM,AES-NI)
 
 Open archive: dist.zip
 --
