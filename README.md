@@ -78,7 +78,7 @@ In main.tf you have to specify the subscription ID you want to use.
 ### Execute Terraform
 
 ```
-mkaesz@arch ~/w/tf-azure-funcapp (main) [1]> terraform init
+mkaesz@arch ~/w/tf-azure-functionapp (main)> terraform init
 
 Initializing the backend...
 
@@ -104,7 +104,7 @@ Terraform has been successfully initialized!
 
 
 
-mkaesz@arch ~/w/tf-azure-funcapp (main)> terraform plan
+mkaesz@arch ~/w/tf-azure-functionapp (main)> terraform plan
 Refreshing Terraform state in-memory prior to plan...
 The refreshed state will be used to calculate this plan, but will not be
 persisted to local or remote state storage.
@@ -125,7 +125,7 @@ Plan: 9 to add, 0 to change, 0 to destroy.
 
 
 
-mkaesz@arch ~/w/tf-azure-funcapp (main)> terraform apply
+mkaesz@arch ~/w/tf-azure-functionapp (main)> terraform apply
 
 An execution plan has been generated and is shown below.
 Resource actions are indicated with the following symbols:
@@ -173,3 +173,5 @@ azurerm_function_app.function: Creation complete after 1m2s [id=/subscriptions/0
 
 Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
 ```
+
+
