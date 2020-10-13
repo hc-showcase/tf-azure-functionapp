@@ -107,21 +107,21 @@ data "azurerm_storage_account_sas" "storage_sas" {
 }
 
 resource "azurerm_function_app" "function" {
-  name                      = random_string.storage_name.result
-  location                  = azurerm_resource_group.rg.location
-  resource_group_name       = azurerm_resource_group.rg.name
-  app_service_plan_id       = azurerm_app_service_plan.plan.id
+  name                       = random_string.storage_name.result
+  location                   = azurerm_resource_group.rg.location
+  resource_group_name        = azurerm_resource_group.rg.name
+  app_service_plan_id        = azurerm_app_service_plan.plan.id
   storage_account_name       = azurerm_storage_account.storage.name
   storage_account_access_key = azurerm_storage_account.storage.primary_access_key
-  version = "~3"
+  version                    = "~3"
 
   app_settings = {
-    FUNCTIONS_WORKER_RUNTIME = "python"
-    FUNCTION_APP_EDIT_MODE   = "readonly"
-    FUNCTIONS_EXTENSION_VERSION = "~3"
-    https_only               = true
+    FUNCTIONS_WORKER_RUNTIME     = "python"
+    FUNCTION_APP_EDIT_MODE       = "readonly"
+    FUNCTIONS_EXTENSION_VERSION  = "~3"
+    https_only                   = true
 
-    HASH                     = base64encode(filesha256("./dist.zip"))
-    WEBSITE_RUN_FROM_PACKAGE = "https://${azurerm_storage_account.storage.name}.blob.core.windows.net/${azurerm_storage_container.storage_container.name}/${azurerm_storage_blob.storage_blob.name}${data.azurerm_storage_account_sas.storage_sas.sas}"
+    HASH                         = base64encode(filesha256("./dist.zip"))
+    WEBSITE_RUN_FROM_PACKAGE     = "https://${azurerm_storage_account.storage.name}.blob.core.windows.net/${azurerm_storage_container.storage_container.name}/${azurerm_storage_blob.storage_blob.name}${data.azurerm_storage_account_sas.storage_sas.sas}"
   }
 }
