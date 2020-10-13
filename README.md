@@ -183,4 +183,6 @@ azurerm_function_app.function: Creation complete after 1m2s [id=/subscriptions/0
 Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
 ```
 
+### Execute the function
 
+Go to Azure Portal Login and to your function. Get the URL from there. I couldn't find a way to get the URL from Azure's CLI.
