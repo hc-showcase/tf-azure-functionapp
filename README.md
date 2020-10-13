@@ -15,9 +15,17 @@ Execute ```az login``` and follow the instructions in your browser or ```az logi
 ## Clone this repo
 
 ```
-git clone git@github.com:hc-showcase/tf-azure-functionapp.git
+mkaesz@arch ~/workspace> git clone git@github.com:hc-showcase/tf-azure-functionapp.git
+Cloning into 'tf-azure-functionapp'...
+Warning: Permanently added 'github.com,140.82.121.3' (RSA) to the list of known hosts.
+remote: Enumerating objects: 39, done.
+remote: Counting objects: 100% (39/39), done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 39 (delta 15), reused 27 (delta 7), pack-reused 0
+Receiving objects: 100% (39/39), 14.22 KiB | 14.22 MiB/s, done.
+Resolving deltas: 100% (15/15), done.
 
-cd tf-azure-functionapp
+mkaesz@arch ~/workspace> cd tf-azure-functionapp/
 
 ```
 ### Build the Zip
