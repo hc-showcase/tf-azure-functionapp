@@ -9,7 +9,7 @@ variable "azure_resource_group_name" {
 
 variable "azure_subscription_id" {
     description = "Set the target subscription in Azure"
-    default = "02d0e06b-ed9d-4ca5-bb9f-0a0243a9c9f2"
+    default = "02d0e06b-ed9d-4ca5-bb9f-4f0243a9c9f2"
 }
 
 variable "azure_region" {
